@@ -1,0 +1,26 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="LocalCanBeFinal" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="REPORT_VARIABLES" value="true" />
+      <option name="REPORT_PARAMETERS" value="true" />
+    </inspection_tool>
+    <inspection_tool class="SSBasedInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <searchConfiguration name="MOONLAB: Test must follow naming convention givenX_whenY_thenZ (example: givenFirstname_whenNotEmpty_thenFirstnameIsValid)" uuid="6549f011-f8db-31c6-8e78-943e6dec8931" text="class $Class$ {&#10;  @Test&#10;  $ReturnType$ $Method$($ParameterType$ $Parameter$);&#10;}" recursive="true" caseInsensitive="false" type="JAVA" pattern_context="member">
+        <constraint name="__context__" within="" contains="" />
+        <constraint name="Class" within="" contains="" />
+        <constraint name="ReturnType" within="" contains="" />
+        <constraint name="Method" regexp="given\w+_when\w+_then\w+" target="true" negateName="true" within="" contains="" />
+        <constraint name="ParameterType" minCount="0" within="" contains="" />
+        <constraint name="Parameter" minCount="0" maxCount="2147483647" within="" contains="" />
+      </searchConfiguration>
+      <searchConfiguration name="Stop using Mockito.when" uuid="2bd1bce4-e6e7-32d0-9e93-961b0b50697d" description="Please use doReturn instead." problemDescriptor="Usage of Mockito.when" text="$MethodCall$($Parameter$)" recursive="true" caseInsensitive="true" type="JAVA" pattern_context="default">
+        <constraint name="__context__" within="" contains="" />
+        <constraint name="MethodCall" regexp="when" nameOfExprType="org.mockito.*" target="true" within="" contains="" />
+        <constraint name="Parameter" minCount="0" maxCount="2147483647" within="" contains="" />
+      </searchConfiguration>
+    </inspection_tool>
+    <inspection_tool class="UnqualifiedFieldAccess" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="UnqualifiedMethodAccess" enabled="true" level="WARNING" enabled_by_default="true" />
+  </profile>
+</component>
